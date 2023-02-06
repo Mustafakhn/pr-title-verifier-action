@@ -1,0 +1,16 @@
+name: "jira-id-verifier"
+descriprion: "to check the pr title contains the jira id"
+author: Mustafa Khan
+
+outputs:
+  output-results:
+    description: "results of health check"
+    value: ${{ steps.test.outputs.output-result }}
+runs:
+  using: "composite"
+  steps:
+    - name: test
+      run: |
+          sudo chmod u+x $GITHUB_ACTION_PATH/jira-verifier.sh
+          $GITHUB_ACTION_PATH/jira-verifier.sh $(gh pr view --json title | cut -d ' ' -f 1 | sed 's/{"title":"//')
+      shell: bash

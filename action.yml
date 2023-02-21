@@ -12,6 +12,5 @@ runs:
     - name: test
       run: |
           sudo chmod u+x $GITHUB_ACTION_PATH/jira-verifier.sh
-          ./jira-verifier.sh $(gh pr view --json title | cut -d ' ' -f 1 | sed 's/{"title":"//')
-          # $GITHUB_ACTION_PATH/jira-verifier.sh $(gh pr view --json title | cut -d ' ' -f 1 | sed 's/{"title":"//')
+          $GITHUB_ACTION_PATH/jira-verifier.sh $(gh pr view --json title | cut -d ' ' -f 1 | sed 's/{"title":"//')
       shell: bash

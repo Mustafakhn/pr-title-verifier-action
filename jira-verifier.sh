@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 
 arg=$1
 code=$(echo "$arg" | cut -d '-' -f 1)

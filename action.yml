@@ -1,6 +1,9 @@
 name: "jira-id-verifier"
 descriprion: "this action checks the pr title to contain a specific code like [TEST-123] at the beginning for tools like jira and more"
 author: Mustafa Khan
+branding:
+  icon: check
+  color: 'blue'
 
 outputs:
   output-results:

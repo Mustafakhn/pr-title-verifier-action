@@ -1,5 +1,5 @@
 name: "jira-id-verifier"
-descriprion: "this action checks the begining of the pull request title to contain a specific code like [TEST-123] for tools like jira and more"
+descriprion: "this action checks the beginning of the pr title to contain a specific code like [TEST-123] for tools like jira and more"
 author: Mustafa Khan
 
 outputs:

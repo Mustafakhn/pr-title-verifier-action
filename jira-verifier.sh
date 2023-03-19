@@ -1,6 +1,6 @@
 #!/bin/bash
 
-arg=$1
+arg=$(echo "$1" | cut -d ']' -f 1  | sed 's/\[//')
 code=$(echo "$arg" | cut -d '-' -f 1)
 number=$(echo "$arg" | cut -d '-' -f 2)
 codeLength=${#code}
